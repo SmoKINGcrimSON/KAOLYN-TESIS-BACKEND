@@ -7,6 +7,11 @@ import { userRouter } from './router/userRouter.js';
 
 const app = express()
 app.use(express.json());
+app.get('/', (req, res ) => {
+  res.status(200).send({
+    "hello": "hello"
+  })
+})
 app.use('/user', userRouter)
 
 export default app
